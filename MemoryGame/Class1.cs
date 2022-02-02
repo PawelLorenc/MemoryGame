@@ -18,7 +18,7 @@ namespace MemoryGame
         public void draw()
         {
             Console.Write("  ");
-            for(int i = 1; i - 1 < board.GetLength(0); i++)
+            for(int i = 1; i - 1 < board.GetLength(1); i++)
             {
                 Console.Write(i.ToString().PadRight(20, ' '));
             }
