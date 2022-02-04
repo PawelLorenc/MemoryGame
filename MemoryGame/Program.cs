@@ -2,7 +2,12 @@
 using MemoryGame;
 
 
-var worldShuffler = new WordShuffler();
-string[,] newGame = worldShuffler.randomWordsToList(2, 4);
+var newGame = new GameLogic();
+newGame.startTheGame();
 
-new Board(newGame).draw();
+
+
+
+
+
+
