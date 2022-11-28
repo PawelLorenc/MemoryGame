@@ -65,8 +65,8 @@ namespace MemoryGame
             printGame();
             if (chancesLeft > 0)
             {
-                Console.WriteLine("Congratulations! You won The game in " + (chance - chancesLeft) + " moves.");
-                Console.WriteLine("It took you " + elapsedMs / 1000 + " seconds to finish the game");
+                Console.WriteLine("Congratulations! You won the game in " + (chance - chancesLeft) + " moves.");
+                Console.WriteLine("It took you " + elapsedMs / 1000 + " seconds to finish the game.");
                 Console.WriteLine("Provide your name: ");
                 string name = Console.ReadLine();
                 addHighScore(elapsedMs, chance - chancesLeft, name);
@@ -75,14 +75,14 @@ namespace MemoryGame
             } else
             {
                 Console.WriteLine("You lost :(");
-                Console.WriteLine("It took you " + elapsedMs / 1000 + " sseconds to finish the game");
+                Console.WriteLine("It took you " + elapsedMs / 1000 + " sseconds to finish the game.");
             }
         }
 
         private void printGame()
         {
             Console.Clear();
-            Console.WriteLine("Chosen difficulty level: " + difficultyLevel + ". " + "You have " + chancesLeft + " chances to guess");
+            Console.WriteLine("Difficulty level: " + difficultyLevel + ". " + "You have " + chancesLeft + " chances to guess.");
             for (int i = 0; i < discovered.Count; i++)
             {
                 board.showWord(discovered[i]);
@@ -105,11 +105,11 @@ namespace MemoryGame
         {
             while (true)
             {
-                Console.WriteLine("Choose difficulty level. Type hard or easy");
+                Console.WriteLine("Choose difficulty level. Type Hard or Easy.");
                 string difficultyLevel = Console.ReadLine();
                 while (!difficultyLevel.ToLower().Equals("easy") && !difficultyLevel.ToLower().Equals("hard"))
                 {
-                    Console.WriteLine("Incorrect difficulty level. Type hard or easy");
+                    Console.WriteLine("Incorrect difficulty level. Type Hard or Easy.");
                     difficultyLevel = Console.ReadLine();
                     if (difficultyLevel.ToLower().Equals("hard") || difficultyLevel.ToLower().Equals("easy"))
                     {
@@ -127,11 +127,11 @@ namespace MemoryGame
                     level(15, 4, 4, "hard");
                 }
 
-                Console.WriteLine("Would you like to play again? Type yes to play or no to quit");
+                Console.WriteLine("Would you like to play again? Type Yes to play or No to quit.");
                 string playAgain = Console.ReadLine().ToLower();
                 while (playAgain != "yes" && playAgain != "no")
                 {
-                    Console.WriteLine("Incorrect command. Type yes to play again or no to quit the game.");
+                    Console.WriteLine("Incorrect command. Type Yes to play again or No to quit the game.");
                     playAgain = Console.ReadLine().ToLower();
 
                 }
